@@ -49,37 +49,18 @@ Za složenu interakciju kratak scenarij *Given / When / Then* može pojasniti kr
 
 ## 2.2 Nefunkcijski zahtjevi
 
-**Cilj:** Odrediti važna svojstva kvalitete i uvjete rada odobrene aplikacije na način koji tim može razumno provjeriti.
-
-| ID | Opis | Prioritet | Izvor |
-| --- | --- | --- | --- |
-| NF-01 | [Konkretan zahtjev (npr. odziv, sigurnost, pristupačnost)] | Visok / Srednji / Nizak | [Sigurnost / Uputa / SLA] | [Mjerenje / Testni scenarij / Pregled] |
-|  |  |  |  |
-
-<details>
-<summary><strong>Odabir provjerljivih nefunkcijskih zahtjeva</strong></summary>
-
-Relevantna svojstva mogu se odnositi na uporabljivost, pristupačnost, sigurnost, performanse ili pouzdanost. Odaberite svojstva specifična za projekt i opišite kako ih je moguće provjeriti. Zahtjev navodi što se očekuje; stvarna opažanja i dokazi pripadaju rezultatima ispitivanja, a ne drugom stupcu s rezultatima u ovoj tablici.
-
-**Primjer — nefunkcijski zahtjevi za aplikaciju CrisisMap:**
-
-| ID | Opis | Prioritet | Izvor |
-| --- | --- | --- | --- |
-| NF-1.1 | Sustav mora podržati 1.000 istodobnih korisnika uz vrijeme odziva kraće od 1 s. | Visok | SLA |
-| NF-1.2 | Svi osjetljivi podaci moraju biti šifrirani algoritmom AES-256. | Visok | Sigurnosna politika |
-| NF-1.3 | Korisničko sučelje mora podržavati engleski i španjolski jezik. | Srednji | Povratna informacija dionika |
-| NF-1.4 | Dostupnost sustava mora iznositi najmanje 99,5 % mjesečno. | Visok | SLA |
-| NF-3.1.7 | Sustav treba imati odgovarajuću dokumentaciju. | Visok | Pravila dokumentiranja |
-| NF-3.1.7.1 | Kod sustava treba biti dokumentiran prema „Code Conventions for the Java Programming Language”. | Visok | Pravila dokumentiranja |
-| NF-3.1.7.2 | Sustav treba biti opisan projektnim dokumentom/SRS-om. | Visok | Pravila dokumentiranja |
-| NF-3.1.7.3 | Sustav treba imati „Operativni priručnik” koji opisuje pravilnu uporabu. | Visok | Pravila dokumentiranja |
-| NF-3.1.7.4 | Sustav treba imati „Plan implementacije” za pravilno postavljanje. | Visok | Smjernice za postavljanje |
-
-**Provjerljivost i opseg:** Primjer uvodi performanse, sigurnost, lokalizaciju, dostupnost i dokumentaciju, uključujući hijerarhijski ID zahtjeva. Navedeni izvori primjeri su podrijetla zahtjeva, a ne dokaz da za studentski projekt stvarno postoji SLA ili sigurnosna politika. Vrijednosti poput 1.000 korisnika, 99,5 % mjesečne dostupnosti i AES-256 moraju imati odobren izvor i izvediv način provjere prije nego što postanu zahtjevi tima. Skup zahtjeva o dokumentaciji ilustrira razlaganje zahtjeva, ali zahtjevi za izradu *ove dokumentacije kolegija* u pravilu pripadaju uputama zadatka, a ne zahtjevima kvalitete web-aplikacije.
-
-**Primjer prilagodbe:** Ako je pristupačnost zahtjevana za  projekt, projektno specifičan zahtjev može glasiti: „NF-01: Sve obavezne radnje u obrascu za podnošenje prijave moguće je izvršiti samo tipkovnicom, uz vidljiv fokus na aktivnoj kontroli.” Provjera: navigirati kroz obrazac bez pokazivačkog uređaja, odabrati ili unijeti lokaciju, poslati prijavu i provjeriti može li se pročitati rezultat. To je provjerljivo svojstvo kvalitete, a ne dodatna funkcionalnost koju svaki projekt mora implementirati.
-
-</details>
+| ID | Opis | Prioritet | Izvor | Način provjere |
+|--- | --- | --- | --- | --- |
+| NF-01 | Sav promet u produkciji ide preko HTTPS. HTTP zahtjevi preusmjeravaju se na HTTPS. | Visok | Sigurnosna politika | Provjera certifikata SSL testom. Pokušaj pristupa stranici preko HTTP-a vraća 301 |
+| NF-02 | Na poslužitelju se radi provjera ovlasti. Zahtjev bez dopušenja vraća 403 | Visok | Upute | Provjera krajnjih točaka automatiziranim testovima različitim ulogama |
+| NF-03 | Sustav je zaštićen od uobičajenih web ranjivosti (SQLi, XSS, CSRF...) | Visok | Sigurnosna praksa | Pregled koda i ručno penetracijsko testiranje. |
+| NF-04 | Dopušteno je prenositi samo slikovne, audio i PDF datoteke, do maksimalno 20MB. | Srednje | Upute | Testovi prijenosa većih i neodgovarajućih datoteka |
+| NF-05 | Na web stranici istodobno može biti prijavljeno 100 korisnika te je odziv manji od 2s po zahtjevu | Srednje | SLA | Testovi virtualno izazvanim opterećenjima |
+| NF-06 | Pretraživanje prilika po području, lokaciji i roku za prijavu vraća rezultate unutar 2s za bazu od 100 prilika. | Nizak | SLA | Mjerenje na bazi napunjenoj testnim podacima |
+| NF-07 | Nedostupnost Google Maps ili Google Calendar ne utječe na funkcionalnost ostatka stranice. | Srednji | Dogovor tima | Test s blokiranim pozivima prema Google API-ju. |
+| NF-08 | ustav je dostupan najmanje 95 % vremena tijekom razdoblja ocjenjivanja. | Nizak | SLA | Health-check s vanjskim monitoringom |
+| NF-09 | Sve prijave i registracije korisnika odvijaju se isključivo putem OAuth 2.0 servisa | Visok | Upute | Testiranje registracije i prijave |
+| NF-10 | Baza podataka mora imati kapacitet pohrane 1000 korisnika te 1000 prilika/natjecanja. | Srednje | Procjena tima | Punjenje baze podataka testim podacima. |
 
 ## 2.3 Dionici i akteri
 
