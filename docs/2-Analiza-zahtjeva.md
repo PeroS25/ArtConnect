@@ -64,11 +64,11 @@ Za složenu interakciju kratak scenarij *Given / When / Then* može pojasniti kr
 
 ## 2.3 Dionici i akteri
 
-| ID uloge ili aktera | Odnos prema sustavu | Relevantni zahtjevi |
-| --- | --- | --- |
-| A-01 | Umjetnik |  |
-| A-02 | Organizator |  |
-| A-03 | Administrator sustava |  |
+|**ID**|**Uloga**|**Odnos prema sustavu**|**Obuhvaćeni**<br>**funkcijski**<br>**zahtjevi**|
+|---|---|---|---|
+|A-01|Umjetnik|Može se prijavit u<br>sustav, može mijenjat<br>svoj profil i portfolio,<br>može objaviti svoj<br>sadržaj, može se<br>prijavit i gledat status<br>eventa|F-001<br>F-002<br>F-003<br>F-005<br>F-006<br>F-007<br>F-008<br>F-010<br>F-013<br>F-014<br>F-015<br>F-018|
+|A-02|Organizator|Može se prijavit u<br>sustav.<br>Može objaviti i upravljat<br>statusom natječaja te<br>pregledati predane<br>prijave te po potrebi<br>zatražiti dodatne<br>informacije od<br>umjetnika, može<br>gledati rezultate te ih<br>objaviti|F-001<br>F-002<br>F-003<br>F-008<br>F-009<br>F-010<br>F-011<br>F-012<br>F-016<br>F-017<br>F-019<br>F-020|
+|A-03|Administrator|upravlja korisnicima,<br>objavljenim sadržajem<br>i organizatorima.<br>Također može<br>upravljati kategorijama<br>umjetnosti, kriterijima<br>za pretraživanje i<br>osnovnim postavkama<br>sustava. Pregledava<br>mjesečne izvještaje|F-003<br>F-021<br>F-022|
 
 
 ## 2.4 Ograničenja i pretpostavke
