@@ -6,7 +6,15 @@
 
 **Cilj:** Jasno razgraničiti problem koji se rješava od predloženog rješenja i stvarne koristi za korisnika.
 
-[Problem, cilj i očekivana korist vlastitim riječima tima.]
+Mladim umjetnicima može biti teško pronaći umjetničke prilike, a organizatorima umjetničkih događanja valjane radove koji bi bili predstavljeni. Cilj ArtConnect web platforme je omogućiti povezivanje umjetnika i organizatora kako bi ostvarili suradnju na projektima.
+
+Umjetnicima i organizatorima omogućena je besplatna registracija i prijava na platformu, dodavanje događaja na kojima sudjeluju u osobni kalendar kao i prikaz fizičkih lokacija izložbi na karti.
+
+Jedna od glavnih poteškoća mladim umjetnicima može biti upravljanje vlastitim portfolijom. ArtConnect omogućuje izradu i uređivanje javnih digitalnih portfolija kako bi umjetnici mogli lakše prikazati svoja djela i slati ih na natječaje. 
+
+Umjetnicima također može biti teško pronaći događaje na kojima bi predstavili svoja djela. Platforma nudi pretraživanje prilika koje odgovaraju njihovom području umjetnosti kako bi prikazali svoje radove i povezali se s drugim profesionalcima iz njihovog područja djelovanja.
+
+Organizatorima izazov predstavlja promoviranje umjetničkih prilika koje organiziraju i pronalaženje odgovarajućih kandidata. Cilj ArtConnect-a je omogućiti organizatorima lakšu objavu natječaja te pregled prijava kako bi našli umjetnike koji najbolje odgovaraju zadanim kriterijima. 
 
 <details>
 <summary><strong>Očekivane koristi i potkrepljujući dokazi</strong></summary>
@@ -23,7 +31,9 @@
 
 | Skupina korisnika ili dionika | Potreba ili interes relevantan za ovaj projekt |
 | --- | --- |
-|  |  |
+| Umjetnik | Pronaći informacije o umjetničkim prilikama, izraditi digitalni portfolijo kako bi se prijavili na odabrani natječaj, pratiti status prijave, prikazati ostvarena sudjelovanja na projektima. |
+| Organizator | Objavljivanje umjetničkih prilika, pregled prijava umjetnika te njihovo prihvaćanje ili odbijanje, pregled osnovnih statistika prijava, objava rezultata organiziranih događaja. |
+| Administrator platforme | Upravljanje korisnicima, objavljenim sadržajem, organizatorima, kategorijama umjetnosti, kriterijima za pretraživanje i osnovnim postavkama sustava. |
 
 <details>
 <summary><strong>Korisnici, dionici i neobavezna persona</strong></summary>
