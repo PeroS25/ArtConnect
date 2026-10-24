@@ -66,20 +66,20 @@ Za složenu interakciju kratak scenarij *Given / When / Then* može pojasniti kr
 
 |**ID**|**Uloga**|**Odnos prema sustavu**|**Obuhvaćeni**<br>**funkcijski**<br>**zahtjevi**|
 |---|---|---|---|
-|A-01|Umjetnik|Može se prijavit u<br>sustav, može mijenjat<br>svoj profil i portfolio,<br>može objaviti svoj<br>sadržaj, može se<br>prijavit i gledat status<br>eventa|F-001<br>F-002<br>F-003<br>F-005<br>F-006<br>F-007<br>F-008<br>F-010<br>F-013<br>F-014<br>F-015<br>F-018|
+|A-01|Umjetnik|Može se prijavit u<br>sustav, može mijenjat<br>svoj profil i portfolio,<br>može objaviti svoj<br>sadržaj, može se<br>prijavit i gledat status<br>eventa|F-001<br>F-002<br>F-003<br>F-004<br>F-005<br>F-006<br>F-007<br>F-008<br>F-010<br>F-013<br>F-014<br>F-015<br>F-018|
 |A-02|Organizator|Može se prijavit u<br>sustav.<br>Može objaviti i upravljat<br>statusom natječaja te<br>pregledati predane<br>prijave te po potrebi<br>zatražiti dodatne<br>informacije od<br>umjetnika, može<br>gledati rezultate te ih<br>objaviti|F-001<br>F-002<br>F-003<br>F-008<br>F-009<br>F-010<br>F-011<br>F-012<br>F-016<br>F-017<br>F-019<br>F-020|
-|A-03|Administrator sustava|upravlja korisnicima,<br>objavljenim sadržajem<br>i organizatorima.<br>Također može<br>upravljati kategorijama<br>umjetnosti, kriterijima<br>za pretraživanje i<br>osnovnim postavkama<br>sustava. Pregledava<br>mjesečne izvještaje|F-003<br>F-021<br>F-022|
+|A-03|Administrator platforme|upravlja korisnicima,<br>objavljenim sadržajem<br>i organizatorima.<br>Također može<br>upravljati kategorijama<br>umjetnosti, kriterijima<br>za pretraživanje i<br>osnovnim postavkama<br>sustava. Pregledava<br>mjesečne izvještaje|F-003<br>F-021<br>F-022|
 
 
 ## 2.4 Ograničenja i pretpostavke
 
 **Cilj:** Zabilježiti projektno specifične granice i pretpostavke koje utječu na zahtjeve ili oblikovanje, zajedno s njihovim izvorom i praktičnom posljedicom. Ovo je njihovo mjerodavno mjesto u dokumentaciji.
 
-| ID | Tip | Opis ograničenja ili pretpostavke | Izvor | Inženjerska posljedica / Provjera |
-| --- | --- | --- | --- |
-| C-01 | Ograničenje | [Fiksni tehnički ili procesni uvjet] | [Zadatak / Pravila] | [Utjecaj na arhitekturu i oblikovanje] |
-| AS-01 | Pretpostavka | [Očekivani uvjet (npr. o podacima ili okolini)] | [Procjena tima] | [Kako i kada će se provjeriti valjanost] |
-|  |  |  |  |
+| ID    | Tip          | Opis ograničenja ili pretpostavke               | Izvor               | Inženjerska posljedica / Provjera        |
+| ----- | ------------ | ----------------------------------------------- | ------------------- | ---------------------------------------- |
+| C-01  | Ograničenje  | [Fiksni tehnički ili procesni uvjet]            | [Zadatak / Pravila] | [Utjecaj na arhitekturu i oblikovanje]   |
+| AS-01 | Pretpostavka | [Očekivani uvjet (npr. o podacima ili okolini)] | [Procjena tima]     | [Kako i kada će se provjeriti valjanost] |
+|       |              |                                                 |                     |
 
 <details>
 <summary><strong>Ograničenja nasuprot pretpostavkama</strong></summary>
@@ -88,10 +88,10 @@ Ograničenje je uvjet koji tim mora poštovati; pretpostavka je uvjet na koji se
 
 **Primjer — projektni kontekst CrisisMapa:**
 
-| ID | Ograničenje ili pretpostavka | Izvor | Posljedica ili način provjere |
-| --- | --- | --- | --- |
-| C-01 | Odobreni zadatak zahtijeva OAuth prijavu u sustav za uređivanje vlastitih prijava korisnika. | Odobreni zadatak  | Zaštićeno uređivanje projektirati oko odabranog pružatelja identiteta; provjeriti autorizirane i neautorizirane zahtjeve. |
-| AS-01 | Prijave koje se prikazuju na karti imaju uporabive koordinate. | Pretpostavka o podacima  | Pregledati ogledne i uvezene prijave; planirati prikaz prijava bez valjanih koordinata. |
+| ID    | Ograničenje ili pretpostavka                                                                 | Izvor                   | Posljedica ili način provjere                                                                                             |
+| ----- | -------------------------------------------------------------------------------------------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| C-01  | Odobreni zadatak zahtijeva OAuth prijavu u sustav za uređivanje vlastitih prijava korisnika. | Odobreni zadatak        | Zaštićeno uređivanje projektirati oko odabranog pružatelja identiteta; provjeriti autorizirane i neautorizirane zahtjeve. |
+| AS-01 | Prijave koje se prikazuju na karti imaju uporabive koordinate.                               | Pretpostavka o podacima | Pregledati ogledne i uvezene prijave; planirati prikaz prijava bez valjanih koordinata.                                   |
 
 **Ograničenje nasuprot pretpostavci:** C-01 navodi obvezujuću odluku i njezin arhitekturni učinak; AS-01 je moguće provjeriti i može se pokazati netočnim. Nemojte kopirati C-01 ako OAuth nije dio stvarnog odobrenog zadatka. Projektni odgovor objasnite u arhitekturi bez prepisivanja ove tablice.
 
